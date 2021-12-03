@@ -7,8 +7,8 @@ Este projeto é um exemplo básico feito com Django framework, para uma melhor e
   1. Baixe este projeto através do comando ``` git clone https://github.com/Vieiraork/Django-exemple.git ```
   2. Criar a virtualenv ```python -m venv venv```
   3. Ativar a virtualenv
-    3.1. No Windows ```cd/venv/Scripts/activate```
-    3.2. No Unix/Linux ```cd venv/bin/activate```
+      3.1. No Windows ```cd/venv/Scripts/activate```
+      3.2. No Unix/Linux ```cd venv/bin/activate```
   4. Volte na raiz onde se encontra o aquivo requirements.txt
   5. Execute o comando ```pip install requirements.txt```
   6. Entre na pasta exemplos ```cd exemplos```
