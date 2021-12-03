@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <form action="">
+    <form method="POST">
         <div class="container">
             <label for="numero1">Numero</label>
             <input type="text" name="numero1" id="numero1"
@@ -23,6 +23,10 @@
         </div>
         <div>
             <input type="submit" value="Calcular">
+        </div>
+        <div>
+            <h1>Resultado</h1>
+            <p>A soma entre {{ n1 }} e {{ n2 }} é {{ soma }}</p>
         </div>
     </form>
 </body>
