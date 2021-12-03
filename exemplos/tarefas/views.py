@@ -8,9 +8,11 @@ def helloWordl(request):
 
 @csrf_exempt
 def contas(request):
-    num1 = request.POST['numero1']
-    num2 = request.POST['numero2']
+    num1 = request.POST.get('numero1')
+    num2 = request.POST.get('numero2')
         
-    soma = int(num1) + int(num2)
-        
-    return render(request, 'tarefas/contas.html', {'soma': soma, 'n1': num1, 'n2': num2})
+    if num1 != None and num2 != None:
+        soma = int(num1) + int(num2)
+    else:
+        soma = 0
+    return render(request, 'tarefas/contas.html', {'soma': soma})

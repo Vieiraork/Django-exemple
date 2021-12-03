@@ -25,8 +25,12 @@
             <input type="submit" value="Calcular">
         </div>
         <div>
-            <h1>Resultado</h1>
-            <p>A soma entre {{ n1 }} e {{ n2 }} é {{ soma }}</p>
+            {% if soma != 0 %}
+                <h1>Resultado da soma</h1>
+                <p>{{ soma }}</p>
+            {% else %}
+                <p>Informe dois números para efetuar a soma</p>
+            {% endif %}
         </div>
     </form>
 </body>
