@@ -1,37 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contas</title>
-    <style>
+{% extends 'base.html' %}
 
-    </style>
-</head>
-<body>
+{% block title %}{% endblock %}
+
+{% block content %}
     <form method="POST">
         <div class="container">
-            <label for="numero1">Numero</label>
-            <input type="text" name="numero1" id="numero1"
-            placeholder="152">
-        </div>
-        <div>
-            <label for="numero2">Numero</label>
-            <input type="text" name="numero2" id="numero2"
-            placeholder="425">
-        </div>
-        <div>
-            <input type="submit" value="Calcular">
-        </div>
-        <div>
-            {% if soma != 0 %}
-                <h1>Resultado da soma</h1>
-                <p>{{ soma }}</p>
-            {% else %}
-                <p>Informe dois números para efetuar a soma</p>
-            {% endif %}
+            <h1 style="padding-top: 10px; text-align: center">Soma</h1>
+            <div class="form-group">
+                <label for="numero1">Numero</label>
+                <input type="text" name="numero1" id="numero1"
+                placeholder="152" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="numero2">Numero</label>
+                <input type="text" name="numero2" id="numero2"
+                placeholder="425" class="form-control">
+            </div>
+            <div class="btn-div" style="padding-top: 10px; text-align: center">
+                <input type="submit" value="Calcular" class="btn btn-info">
+            </div>
+
+            <div style="padding-top: 10px; text-align: center">
+                {% if soma != 0 %}
+                    <h3>Resultado da soma</h3>
+                    <p>{{ soma }}</p>
+                {% else %}
+                    <p>Informe dois números para efetuar a soma</p>
+                {% endif %}
+            </div>
         </div>
     </form>
-</body>
-</html>
+{% endblock %}
